@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="style.css">
+    <title>Accueil</title>
+</head>
+
+ <!-- ______________________________________________________________________________ -->
+
+<body>
+
+<!-- POLICE IMPORTER SUR GOOGLE -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<!-- __________________________________________________________________________________ --> 
+
+<!-- entete -->
+<header>
+
+  <!-- logo -->
+ <div class="logo"> <img src="img/logo.png"> </div>
+
+  <!-- boutton -->
+  <button onclick ="show()"class="menubtn">≡</button>
+
+  <!-- menu -->
+  <ul class="menu">
+
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="portfolio.html">Portefolio</a></li>
+    <li><a href="jeu.html">Jeux & Applications</a></li>
+    <li><a href="contact.html">Contact</a></li>   
+ 
+  </ul>
+
+</header>
+
+<!-- _______________________________________________________________________________________ -->
+
+ <div class="creditbloc1">
+   <h2>Certaines images et illustrations ont étaient obtenues sur les sites :</h2>
+
+   <ul>
+    <li>icones8.fr </li>
+    <li>canva.com </li>
+   </ul>
+
+  </div>
+
+
+</body>
+
+<!-- ______________________________________________________________________________________ -->
+
+<!-- FOOTER DE LA PAGE-->
+<footer> 
+ <div class="foot">
+    <a href="credit.html">Crédits</a>
+    <p><a href="maj.html">Version Alpha 1.2</a></p>
+ </div>
+</footer>
+
+<!-- _______________________________________________________________________________________-->
+
+<!-- Fonction clique -->
+<script>
+  function show()
+{
+  document.getElementById('menu').classList.toggle('active')
+}
+
+</script>
+
+
+
+</body>
+</html>

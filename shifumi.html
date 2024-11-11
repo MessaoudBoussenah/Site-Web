@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="style.css">
+    <title>Accueil</title>
+</head>
+
+ <!-- ______________________________________________________________________________ -->
+
+<body>
+
+<!-- POLICE IMPORTER SUR GOOGLE -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<!-- __________________________________________________________________________________ --> 
+
+<!-- entete -->
+<header>
+
+  <!-- logo -->
+ <div class="logo"> <img src="img/logo.png"> </div>
+
+  <!-- boutton -->
+  <button onclick ="show()"class="menubtn">≡</button>
+
+  <!-- menu -->
+  <ul class="menu">
+
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="portfolio.html">Portefolio</a></li>
+    <li><a href="jeu.html">Jeux & Applications</a></li>
+    <li><a href="contact.html">Contact</a></li>   
+ 
+  </ul>
+
+</header>
+
+<!-- _______________________________________________________________________________________ -->
+
+ 
+ <!-- (bloc1) - fond  -->
+ <div class="jeubloc1">
+  <h2>Jouer au shifumi</h2>
+</div>
+ 
+ <!-- (bloc2) - JEU ET REGLES DU JEU -->
+ <div class="jeubloc2">
+
+   <!--(cartes 1) -->
+   <div class="caseapp"> 
+    <h2>SHIFUMI</h2>
+    <img src="img/shifumi.png" alt="Logo" />
+    <button id="buttonapp">Lancer</button>
+   </div>
+
+   <!--(cartes 2) -->
+    <div class="caseapp"> 
+      <h2>Régles du jeu</h2>
+      <p></p>>
+    </div>
+
+
+
+ </div>
+
+<!-- Zone pour afficher le résultat -->
+<div id="resultat"></div>
+
+
+<!-- (bloc3) - jeu  --> 
+<script>
+'use strict';
+
+// Fonction pour lancer le jeu Shifumi
+function lancerShifumi() 
+{
+// Declaration des variables
+   var player;
+   var random;
+   var computer;
+
+   // Demander au joueur son choix (pierre, feuille ou ciseaux)
+   player = window.prompt('Choisissez pierre, feuille ou ciseaux');
+   player = player.toLowerCase(); // Mettre en minuscule
+
+   // Generer un nombre aleatoire pour le choix de l'ordinateur
+   random = Math.random();
+
+   // Definir le choix de l'ordinateur selon le nombre aleatoire
+   if (random < 1 / 3) {
+       computer = 'pierre';
+   } else if (random < 2 / 3) {
+       computer = 'feuille';
+   } else {
+       computer = 'ciseaux';
+   }
+
+   // Afficher le choix de l'ordinateur
+   document.getElementById("resultat").innerHTML = "<p>Choix de l'ordinateur : <strong>" + computer + "</strong></p>";
+
+   // Verifier si c'est une egalite
+   if (player === computer) 
+   {
+       document.getElementById("resultat").innerHTML += "<p>Égalité !</p>";
+   } 
+   
+   else {
+       // Verification des differents cas avec un switch sur la variable computer
+       switch (computer) 
+       {
+           case 'pierre':
+               if (player === 'feuille') 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>Vous avez gagné ! Feuille bat pierre.</p>";
+               } 
+               else 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>L'ordinateur a gagné ! Pierre bat ciseaux.</p>";
+               }
+               break;
+
+           case 'feuille':
+               if (player === 'pierre') 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>L'ordinateur a gagné ! Feuille bat pierre.</p>";
+               } 
+               else 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>Vous avez gagné ! Ciseaux bat feuille.</p>";
+               }
+               break;
+
+           case 'ciseaux':
+               if (player === 'pierre') 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>Vous avez gagné ! Pierre bat ciseaux.</p>";
+               } 
+               else 
+               {
+                   document.getElementById("resultat").innerHTML += "<p>L'ordinateur a gagné ! Ciseaux bat feuille.</p>";
+               }
+               break;
+       }
+   }
+}
+
+// Associer le bouton au lancement de la fonction lancerShifumi
+document.getElementById("buttonapp").onclick = lancerShifumi;
+</script>
+   
+ 
+
+
+</body>
+
+<!-- ______________________________________________________________________________________ -->
+
+<!-- FOOTER DE LA PAGE-->
+<footer> 
+ <div class="foot">
+    <a href="credit.html">Crédits</a>
+    <p><a href="maj.html">Version Alpha 1.2</a></p>
+ </div>
+</footer>
+
+<!-- _______________________________________________________________________________________-->
+
+<!-- Fonction clique -->
+<script>
+  function show()
+{
+  document.getElementById('menu').classList.toggle('active')
+}
+
+</script>
+
+
+
+</body>
+</html>
