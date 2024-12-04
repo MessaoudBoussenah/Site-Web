@@ -454,6 +454,16 @@ h3
 .caseapp h2
 {
 	color: white;
+	padding-bottom: 20px;
+}
+
+/*Case Appli (Règles)*/
+.caseapp ul li
+{
+	color: white;
+	padding-top: 5px;
+	list-style-type: none;
+	text-align: center;
 }
 
 /*Case Appli (Image)*/
@@ -502,6 +512,78 @@ h3
 {
 	background-color: white;
 	width: 500px;
+}
+
+
+/*____________________________________________________________*/
+
+                                      /*PAGE CALCULATRICE */
+/*____________________________________________________________*/
+
+/*Fond*/
+.fondcalcul
+{
+	width: 100%;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Caluclatrice*/
+.calculatrice
+{
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+/*Touche Calculatrice*/
+.calculatrice form input
+{
+	border: 0;
+	outline: 0;
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	box-shadow: -2px -2px 2px 2px;
+	background: transparent;
+	font-size: 20px;
+	color: #40C057;
+	cursor: pointer;
+	margin:10px;
+}
+
+/*Ecran Calculatrice*/
+form .display
+{
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 0;
+}
+
+/*Texte Ecran Calculatrice*/
+form .display input
+{
+	text-align: right;
+	flex: 1;
+	font-size: 40px;
+	box-shadow: none;
+}
+
+/*Boutton Egal Calculatrice*/
+form input.egal
+{
+	width: 150px;
+	color: rebeccapurple;
+}
+
+/*Operateur Calculatrice*/
+form input.operator
+{
+	color: red;
+
 }
 
 
