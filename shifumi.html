@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="style.css">
-    <title>Accueil</title>
+    <title>Shifumi</title>
 </head>
 
  <!-- ______________________________________________________________________________ -->
@@ -33,7 +33,6 @@
 
     <li><a href="index.html">Accueil</a></li>
     <li><a href="cv.html">CV</a></li>
-    <li><a href="portfolio.html">Portefolio</a></li>
     <li><a href="jeu.html">Jeux & Applications</a></li>
     <li><a href="contact.html">Contact</a></li>   
  
@@ -52,17 +51,23 @@
  <!-- (bloc2) - JEU ET REGLES DU JEU -->
  <div class="jeubloc2">
 
-   <!--(cartes 1) -->
+   <!--(cartes 1) - JEU -->
    <div class="caseapp"> 
     <h2>SHIFUMI</h2>
     <img src="img/shifumi.png" alt="Logo" />
     <button id="buttonapp">Lancer</button>
    </div>
 
-   <!--(cartes 2) -->
+   <!--(cartes 2) - REGLES DU JEU -->
     <div class="caseapp"> 
       <h2>Régles du jeu</h2>
-      <p></p>>
+      <ul>
+        <li>- Écrivez "pierre", "feuille" ou "ciseaux" pour jouer.</li>
+        <li>- Assurez-vous de bien orthographier votre choix.</li>
+        <li>- Vous jouez contre l'ordinateur, qui choisit aléatoirement.</li>
+        <li>- Pierre bat ciseaux, ciseaux battent feuille, et feuille bat pierre.</li>
+        <li>- Amusez-vous !</li>
+      </ul>
     </div>
 
 
@@ -165,7 +170,7 @@ document.getElementById("buttonapp").onclick = lancerShifumi;
 <footer> 
  <div class="foot">
     <a href="credit.html">Crédits</a>
-    <p><a href="maj.html">Version Alpha 1.2</a></p>
+    <p><a href="maj.html">Version Alpha 1.0</a></p>
  </div>
 </footer>
 
