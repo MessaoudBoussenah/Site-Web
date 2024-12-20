@@ -84,20 +84,20 @@ button
                                           /*PAGE ACCUEIL*/
 /*________________________________________________________________________________________________________________________________________________________*/
 
-
-
-/*(bloc1) - (fond)*/
-.home1
+/*(bloc1 & bloc2) - (fond)*/
+.home1, .home2
 {						
 	display: flex;
 	align-items: center;
 
-	width: 1200px;
+	width: 90%;
 
     /*centrer la div automatiquement*/
-	margin-left: auto;
-    margin-right: auto;
+    margin: 100px auto 100px auto;
 }
+
+/*_________________________________________________________________*/
+
 
 /*(bloc1) - (titre, paragraphe)*/
 .home1 .box1
@@ -121,28 +121,13 @@ button
 	color: white;
 }
 
-
 /*(bloc1) - (image)*/
 .home1 .box2 img
 {
-	width: 400px;
+	width: 300px;
 }
 
 /*_________________________________________________________________*/
-
-/*(bloc2) - (fond)*/
-.home2
-{						
-	display: flex;
-	align-items: center;
-
-	width: 1200px;
-
-    /*centrer la div automatiquement*/
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
 
 
 /*(bloc2) - titre, paragraphe*/
@@ -170,116 +155,7 @@ button
 /*(bloc2) - image*/
 .home2 img
 {
-	width: 400px;
-}
-
-/*_________________________________________________________________*/
-
-/*(bloc2.5) - fond*/
-.home2ed
-{
-    display: flex;
-    justify-content: space-around;
-    width: 1200px;
-
-    margin-left: 40px;
-	margin-right: 300px;
-    
-}
-
-/*(bloc2.5) - carte*/
-.home2ed .box3a 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*(bloc2.5) - carte titre*/
-.home2ed p
-{
-	color: #40C057;
-}
-
-/*(bloc2.5) - carte image*/
-.home2ed .box3a img
-{
-	width: 150px;
-}
-
-/*_________________________________________________________________*/
-
-/*(bloc3) - (fond)*/
-.home3
-{						
-	display: flex;
-	align-items: center;
-
-	width: 1200px;
-
-    /*centrer la div automatiquement*/
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
-/*(bloc3) - titre, paragraphe*/
-.home3 .box1
-{
-    padding-left: 10px;
-}
-
-/*(bloc3) - titre*/
-.home3 h2
-{
-	font-size: 35px;
-	text-align: left;
-	color: #38b6ff;
-}
-
-/*(bloc3) - paragraphe*/
-.home3 p
-{
-	font-size: 25px;
-	padding-top: 20px;
-}
-
-/*(bloc3) - image*/
-.home3 img
-{
-	width: 500px;
-}
-
-/*_________________________________________________________________*/
-
-/*(bloc3.5) - fond*/
-.home3ed
-{
-    display: flex;
-    justify-content: space-around;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*(bloc3.5) - carte*/
-.home3ed .box3a 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*(bloc3.5) - carte titre*/
-.home3ed p
-{
-	color: #36cbfb;
-}
-
-/*(bloc3.5) - carte image*/
-.home3ed .box3a img
-{
-	width: 200px;
+	width: 300px;
 }
 
 /*________________________________________________________________________________________________________________________________________________________*/
@@ -339,7 +215,6 @@ button
   width: 30px;
 }
 
-
 .bouton-down p
 {
   color: #40C057;
@@ -365,67 +240,6 @@ button
 .col-right img
 {
 	width: 400px;
-}
-
-
-/*________________________________________________________________________________________________________________________________________________________*/
-
-                                      /*PAGE PORTFOLIO*/
-/*________________________________________________________________________________________________________________________________________________________*/
-
-/*GALERIE - (fond)*/
-.galerie
-{
-	text-align: center;
-
-	 padding-top: 50px;
-
-	 display: flex;
-	 justify-content: space-around;
-}
-
-/*GALERIE - (titre)*/
-h3
-{
-	text-align: center;
-	color: white;
-	background-color: #38b6ff;
-
-	margin-top: 100px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-/*GALERIE - (cadre logo)*/
-.caselog
-{
-	display: flex;
-	flex-direction: column;
-
-	text-align: center;
-}
-
-/*GALERIE - (logo)*/
-.caselog img
-{
-	width: 400px;
-	height: 200px;
-
-	border: 1px solid #38b6ff;
-	border-radius: 8px;
-}
-
-/*GALERIE - (titre logo)*/
-.caselog h2
-{
-	margin-top: 10px;
-	padding: 2px;
-	
-	background-color: #38b6ff;
-	border: 1px solid #38b6ff;
-	border-radius: 8px;
-	
-	color: white;
 }
 
 /*______________________________________________________________________________________*/
@@ -504,7 +318,6 @@ h3
 	width: 200px;
 }
 
-
 /*_____________________________*/
 
 /*Resultat jeu*/
@@ -513,7 +326,6 @@ h3
 	background-color: white;
 	width: 500px;
 }
-
 
 /*____________________________________________________________*/
 
@@ -599,8 +411,7 @@ form input.operator
 	display: flex;		
 	align-items: center;
 	justify-content: space-evenly;	
-	
-	
+	margin-top: 5%;
 }
 
 /*(bloc1) - (formulaire)*/
@@ -617,7 +428,6 @@ form input.operator
 .titreform h2
 {
 	padding: 20px;
- 
 }
 
 /*(bloc1) - (texte formulaire)*/
@@ -629,82 +439,24 @@ form input.operator
   border-radius: 5px;
 }
 
+/*(bloc1) - (passage souris texte formulaire)*/
+.casecontact:focus
+{
+  border : 2px solid black;
+}
+
 
 /*(bloc1) - (boutton envoyer formulaire)*/
 #buttoncontact
 {
   margin: 10px;
   display: block;
-
 }
 
 /*(bloc2) - (img)*/
 .blocimg img
 {						
  width: 500px;
-}
-
-
-/*________________________________________________________________________________________________________________________________________________________*/
-
-                                         /*PAGE CREDIT*/
-/*________________________________________________________________________________________________________________________________________________________*/
-
-/*(bloc1 - fond)*/
-.creditbloc1
-{
-	display: flex;
-	flex-direction: column;
-
-	border: 2px solid #7ed957; 
-	margin: 10px 30px 0px 30px;
-}
-
-/*(bloc1 - titre)*/
-.creditbloc1 h2
-{
-	font-size: 20px;
-	text-align: center;
-	padding-top: 20px;
-	color: white;
-}
-
-/*(bloc1 - liste)*/
-.creditbloc1 ul
-{
-	list-style-type: none;
-	padding: 2px 0px 5px 0px;
-	text-align: center;
-
-	color: white;
-}
-
-/*(bloc1 - liste nom)*/
-.creditbloc1 ul li
-{
-	padding-top: 2px;
-	color: white;
-}
-
-
-/*___________________________________________________________________________________*/
-                                        /*FOOTER*/
-/*_____________________________________________________________________________________*/
-
-/*FOND PRINCIPAL*/
-.foot
-{
-	background-color: #7ed957;
-	color: white;
-
-	margin-top: 100px;
-	padding: 5px 0px 3px 10px;
-}
-
-/*(lien)*/
-.foot a
-{
-	color: white;
 }
 
 
@@ -722,7 +474,7 @@ form input.operator
 /*____________________________________________________*/
 
 /*boutton menu*/
-button
+.menubtn
 {
     display: block;
     position: absolute;
@@ -742,17 +494,16 @@ button
 /*logo*/
 .logo
 {
-    display: flex;
-    justify-content: flex-end;
+	margin-left: auto;
 }
 
 /*conteneur principal*/
-nav 
+ul .menu
 {
     display: block;
 }
 
-nav ul
+.menu 
 {
     display: block;
     background-color: #36cbfb;
@@ -773,23 +524,14 @@ ul li a
                         /*HOME MOBILE*/
 /*____________________________________________________*/
 
-/*(bloc1, bloc2, bloc3) - fond*/
-.home1, .home2, .home3, .home0
+/*(bloc1, bloc2) - fond*/
+.home1, .home2 
 {
 	flex-direction: column;
-	width: auto;
-
-	margin-top: 20px;
 	text-align: center;
-	margin: 50px 15px 0px 0px;
 }
 
-/*(bloc0 provisoire) - titre*/
-.home0 h2
-{
-   text-align: center;
-   font-size: 30px;
-}
+/* ____________________ */
 
 /*(bloc1) - titre*/
 .home1 h2
@@ -805,315 +547,82 @@ ul li a
    font-size: 30px;
 }
 
-/*(bloc3) - titre*/
-.home3 h2
-{
-   text-align: center;
-   font-size: 30px;
-}
-
-/*(bloc 2ed,3ed) - fond*/
-.home2ed, .home3ed
-{
-  width: auto;
-
-}
-
+/* ____________________ */
 
 /*(bloc1) - image*/
-.home1 img
+.home1 .box2 img
 {
-	max-width: 300px;
+	width: 50%;
+	height: auto;
+	padding-top: 10%;
 }
 
 /*(bloc2) - image*/
-.home2 img
+.home2 .box2 img
 {
-	max-width: 300px;
-}
-
-/*(bloc2.5) - image liste*/
-.home2ed img
-{
-	max-width: 100px;
-}
-
-/*(bloc3) - image*/
-.home3 img
-{
-	max-width: 300px;
-}
-
-
-/*(bloc3.5) - image liste*/
-.home3ed img
-{
-	max-width: 100px;
-}
-
-
-/*____________________________________________________*/
-                        /*MOBILE FLYER*/
-/*____________________________________________________*/
-
-/*(bloc1, bloc2, bloc3, bloc4, bloc5) - fond*/
-.flyerbloc1, .flyerbloc2, .flyerbloc3, .flyerbloc4
-{
-	flex-direction: column;
-	width: auto;
-	text-align: center;
-	font-size: 14px;
-
-	margin: 50px 15px 0px 0px;
-	padding-top: 50px;
-}
-
-/*(bloc 2.5) - fond*/
-.flyerbloc2ed
-{
-  width: auto;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*(bloc 2.5) - icone & texte*/
-.flyerbloc2ed .box3a
-{
-  padding-top: 20px;
-}
-
-/*_______________*/
-
-/*(bloc 1) - titre*/
-.flyerbloc1 h2
-{
-  text-align: center;
-  font-size: 30px;
-}
-
-/*(bloc 2) - titre*/
-.flyerbloc2 h2
-{
-  text-align: center;
-  font-size: 30px;
-}
-
-/*(bloc 2.5) - titre*/
-.flyerbloc2ed h2
-{
-  font-size: 18px;
-}
-
-/*(bloc 3) - titre*/
-.flyerbloc3 h2
-{
-  text-align: center;
-  font-size: 30px;
-}
-
-/*(bloc 4) - titre*/
-.flyerbloc4 h2
-{
-  text-align: center;
-  font-size: 30px;
-}
-
-/*_______________*/
-
-/*(bloc 1) - texte*/
-.flyerbloc1 p
-{
-  font-size: 22px;
-}
-
-/*(bloc 2) - texte*/
-.flyerbloc2 p
-{
-  font-size: 22px;
-}
-
-/*(bloc 2ed) - texte*/
-.flyerloc2ed p
-{
-  font-size: 22px;
-}
-
-/*(bloc 3) - texte*/
-.flyerbloc3 p
-{
-  font-size: 22px;
-}
-
-/*(bloc 4) - texte*/
-.flyerbloc4 p
-{
-  font-size: 18px;
-}
-
-/*_______________*/
-
-/*(bloc1) - image*/
-.flyerbloc1 img
-{
-	max-width: 300px;
-}
-
-/*(bloc2) - image*/
-.flyerbloc2 img
-{
-	max-width: 300px;
-}
-
-/*(bloc2.5) - image*/
-.flyerbloc2ed img
-{
-	max-width: 100px;
-}
-
-/*(bloc3) - image*/
-.flyerbloc3 img
-{
-	max-width: 300px;
-}
-
-
-/*(bloc4) - image*/
-.flyerbloc4 img
-{
-	max-width: 300px;
+	width: 50%;
+	height: auto;
+	padding-top: 10%;
 }
 
 /*____________________________________________________*/
-                        /*PORTFOLIO MOBILE*/
+                        /*MOBILE CV*/
 /*____________________________________________________*/
 
-/*GALERIE - (fond)*/
-.galerie
+/*Containeur CV*/
+.cv-container
 {
-	background-color: white;
-
+	flex-direction: column-reverse;
 	text-align: center;
-
-	 padding-top: 5px;
-	 padding-bottom: 5px;
-
-	 margin-top: 10px;
-
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: space-around;
-	 align-items: center;
 }
 
-/*GALERIE - (case logo)*/
-.caselog
+/*colonne gauche*/
+.col-left
 {
-	background-color: #f6fdff8c;
-	border-radius: 10px;
-
-	display: flex;
-	flex-direction: column;
-
-	text-align: center;
-
-	margin-top: 20px;
+	align-items: center;
 }
 
-/*GALERIE - (logo)*/
-.caselog img
+/*Titre - colonne gauche*/
+.pres h2
 {
-	max-width: 350px;
+	font-size: 20px;
+
 }
 
-/*GALERIE - (case flyer)*/
-.casefly
+/*Texte - colonne gauche*/
+.pres p
 {
-
-	display: flex;
-	flex-direction: column;
-
-	text-align: center;
-	margin-top: 20px;
+	font-size: 17px;
 }
 
-/*GALERIE - (titre flyer)*/
-.casefly h2
+/*colonne droite*/
+.col-right
 {
-	padding-top: 5px;
+	justify-content: center;
 }
 
-
-/*GALERIE - (flyer)*/
-.casefly img
+/*Image - colonne droite*/
+.col-right img
 {
-	max-width: 350px;
-	max-height: 500px;
-	padding-top: 5px;
+	width: 200px;
 }
-
 
 /*____________________________________________________*/
                         /*CONTACT MOBILE*/
 /*____________________________________________________*/
 
-/*(bloc1) - fond*/
-.contbloc1, .contbloc1ed
+/* Bloc formulaire*/
+.blocform
 {
-	flex-direction: column;
 	width: auto;
-
-	margin-top: 10px;
+	flex-direction: column;
 }
 
-/*(bloc1) - image*/
-.contbloc1 h2
+/* Case formulaire*/
+.casenom
 {
-	text-align: center;
+	width: 80vw;
 }
-
-/*(bloc1) - image*/
-.contbloc1 img
-{
-	max-width: 300px;
-}
-
-/*_______________*/
-
-/*(bloc1ed) - image*/
-.contbloc1ed h2
-{
-	text-align: center;
-}
-
-/*(bloc1ed) - image*/
-.contbloc1ed img
-{
-	max-width: 300px;
-}
-
-
-/*___________________________________________________________________________________*/
-                                        /*FOOTER*/
-/*_____________________________________________________________________________________*/
-
-/*FOND PRINCIPAL*/
-.foot
-{
-	background-color: #38b6ff;
-	color: white;
-
-	margin-bottom: 100px;
-	padding: 5px 0px 3px 10px;
-
-	border: 2px black solid;
-}
-
-/*(lien)*/
-.foot a
-{
-	color: white;
-}
-
 
 /*fermeture*/
 }
