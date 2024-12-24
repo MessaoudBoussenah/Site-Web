@@ -43,36 +43,29 @@
 <!-- _______________________________________________________________________________________ -->
 
  
- <!-- (bloc1) - fond  -->
- <div class="jeubloc1">
+<!-- (bloc1) - titre  -->
+<div class="jeubloc1">
   <h2>Jouer au shifumi</h2>
 </div>
  
- <!-- (bloc2) - JEU ET REGLES DU JEU -->
- <div class="jeubloc2">
+<!-- (bloc2) - JEU ET REGLES DU JEU -->
+<div class="regles"> 
+  <h2>Régles du jeu</h2>
+    <ul>
+      <li>- Écrivez "pierre", "feuille" ou "ciseaux" pour jouer.</li>
+      <li>- Assurez-vous de bien orthographier votre choix.</li>
+      <li>- Vous jouez contre l'ordinateur, qui choisit aléatoirement.</li>
+      <li>- Pierre bat ciseaux, ciseaux battent feuille, et feuille bat pierre.</li>
+      <li>- Amusez-vous !</li>
+    </ul>
+</div>
+    
+<!-- (bloc2.5) - IMAGES ET BOUTTON -->
+<div class="jeubloc2">
+  <img src="img/shifumi.png" alt="Logo" />
+  <button id="buttonapp">Lancer</button>
+</div>
 
-   <!--(cartes 1) - JEU -->
-   <div class="caseapp"> 
-    <h2>SHIFUMI</h2>
-    <img src="img/shifumi.png" alt="Logo" />
-    <button id="buttonapp">Lancer</button>
-   </div>
-
-   <!--(cartes 2) - REGLES DU JEU -->
-    <div class="caseapp"> 
-      <h2>Régles du jeu</h2>
-      <ul>
-        <li>- Écrivez "pierre", "feuille" ou "ciseaux" pour jouer.</li>
-        <li>- Assurez-vous de bien orthographier votre choix.</li>
-        <li>- Vous jouez contre l'ordinateur, qui choisit aléatoirement.</li>
-        <li>- Pierre bat ciseaux, ciseaux battent feuille, et feuille bat pierre.</li>
-        <li>- Amusez-vous !</li>
-      </ul>
-    </div>
-
-
-
- </div>
 
 <!-- Zone pour afficher le résultat -->
 <div id="resultat"></div>
@@ -158,21 +151,6 @@ function lancerShifumi()
 // Associer le bouton au lancement de la fonction lancerShifumi
 document.getElementById("buttonapp").onclick = lancerShifumi;
 </script>
-   
- 
-
-
-</body>
-
-<!-- ______________________________________________________________________________________ -->
-
-<!-- FOOTER DE LA PAGE-->
-<footer> 
- <div class="foot">
-    <a href="credit.html">Crédits</a>
-    <p><a href="maj.html">Version Alpha 1.0</a></p>
- </div>
-</footer>
 
 <!-- _______________________________________________________________________________________-->
 
