@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Snake</title>
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <button onclick="show()" class="menubtn">≡</button>
+        <ul id="menu" class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="jeu.html">Jeux & Applications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+<!-- (bloc1) - titre  -->
+<div class="jeubloc1">
+  <h2>Jouer a Snake</h2>
+</div>
+ 
+<!-- (bloc2) - JEU ET REGLES DU JEU -->
+<div class="regles"> 
+  <h2>Régles du jeu</h2>
+  <p>
+    Utilisez les flèches pour déplacer le serpent et manger les nourritures. <br>
+    Chaque nourriture augmente votre score d’un point et allonge le serpent. <br>
+    Évitez les murs et votre propre corps pour continuer à jouer.
+  </p>
+</div>
+    
+<!-- (bloc2.5) - IMAGES ET BOUTTON -->
+<div class="jeubloc2">
+  <img src="img/snake.png" alt="Logo" />
+  <button id="buttonapp">Lancer</button>
+</div>
+
+
+
+
+
+
+ <div id="gameContainer">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+ </div>
+
+    <script>
+        // Fonction pour lancer le jeu Snake
+        function lancerSnake() {
+            const canvas = document.getElementById("gameCanvas");
+            const context = canvas.getContext('2d');
+            const box = 20;
+
+            let snake = [{ x: 10 * box, y: 10 * box }];
+            let food = {
+                x: Math.floor(Math.random() * 15 + 1) * box,
+                y: Math.floor(Math.random() * 15 + 1) * box
+            };
+            let score = 0;
+            let direction;
+
+            document.addEventListener("keydown", (event) => {
+                const key = event.keyCode;
+                if (key == 37 && direction !== "RIGHT") direction = "LEFT";
+                else if (key == 38 && direction !== "DOWN") direction = "UP";
+                else if (key == 39 && direction !== "LEFT") direction = "RIGHT";
+                else if (key == 40 && direction !== "UP") direction = "DOWN";
+
+                if (keys.includes(event.keyCode)) 
+                {
+                   event.preventDefault(); // Empêche le défilement de la page
+                }
+            });
+
+            function collision(head, array) {
+                for (let i = 0; i < array.length; i++) {
+                    if (head.x === array[i].x && head.y === array[i].y) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function draw() {
+                context.fillStyle = "white";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Serpent
+                for (let i = 0; i < snake.length; i++) {
+                    context.fillStyle = i === 0 ? "green" : "lightgreen";
+                    context.fillRect(snake[i].x, snake[i].y, box, box);
+                }
+
+                // Nourriture
+                context.fillStyle = "orange";
+                context.fillRect(food.x, food.y, box, box);
+
+                // Position du serpent
+                let snakeX = snake[0].x;
+                let snakeY = snake[0].y;
+
+                if (direction === "LEFT") snakeX -= box;
+                if (direction === "UP") snakeY -= box;
+                if (direction === "RIGHT") snakeX += box;
+                if (direction === "DOWN") snakeY += box;
+
+                if (snakeX === food.x && snakeY === food.y) {
+                    score++;
+                    food = {
+                        x: Math.floor(Math.random() * 15 + 1) * box,
+                        y: Math.floor(Math.random() * 15 + 1) * box
+                    };
+                } else {
+                    snake.pop();
+                }
+
+                const newHead = { x: snakeX, y: snakeY };
+
+                if (
+                    snakeX < 0 || snakeY < 0 ||
+                    snakeX >= canvas.width || snakeY >= canvas.height ||
+                    collision(newHead, snake)
+                ) {
+                    clearInterval(game);
+                    alert("Perdu ! Retentez votre chance.");
+                }
+
+                snake.unshift(newHead);
+
+                // Score
+                context.fillStyle = "red";
+                context.font = "20px Arial";
+                context.fillText("Score: " + score, box, box);
+            }
+
+            const game = setInterval(draw, 200);
+        }
+
+        // Associer le bouton au lancement du jeu
+        document.getElementById("buttonapp").onclick = lancerSnake;
+
+        // Fonction pour le menu
+        function show() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
