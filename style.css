@@ -247,32 +247,40 @@ button
                                       /*PAGE JEU*/
 /*______________________________________________________________________________________*/
 
-/*Fond*/
+/*(bloc1) - Titre*/
 .jeubloc1
 {
 	background-color: white;
 	text-align: center;
 }
 
-/*Case Appli (Fond)*/
-.caseapp
+/*Regles du jeu - (Fond)*/
+.regles
 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	margin-top: 20px;
+	margin: 20px 0 20px 0;
 }
 
-/*Case Appli (Titre)*/
-.caseapp h2
+/*Regles du jeu - (Titre)*/
+.regles h2
 {
 	color: white;
 	padding-bottom: 20px;
 }
 
-/*Case Appli (Règles)*/
-.caseapp ul li
+/*Case Appli (Règles en paragraphe)*/
+.regles p
+{
+	color: white;
+	padding-top: 5px;
+	text-align: center;
+}
+
+/*Case Appli (Règles en liste)*/
+.regles ul li
 {
 	color: white;
 	padding-top: 5px;
@@ -280,13 +288,21 @@ button
 	text-align: center;
 }
 
-/*Case Appli (Image)*/
-.caseapp img
+/*Images et boutton - (Fond)*/
+.jeubloc2
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*Images et boutton - (Image)*/
+.jeubloc2 img
 {
 	width: 300px;
 }
 
-/*Case Appli (Boutton)*/
+/*Images et boutton - (Boutton)*/
 #buttonapp
 {
 	background-color: white;
@@ -296,12 +312,6 @@ button
 	margin-top: 5px;
 }
 
-/*Jeu & regles*/
-.jeubloc2
-{
-	display: flex;
-	justify-content: space-around;
-}
 
 /*_____________________________*/
 
@@ -329,7 +339,7 @@ button
 
 /*____________________________________________________________*/
 
-                                      /*PAGE CALCULATRICE */
+                     /*PAGE CALCULATRICE */
 /*____________________________________________________________*/
 
 /*Fond*/
@@ -396,6 +406,25 @@ form input.operator
 {
 	color: red;
 
+}
+
+/*____________________________________________________________*/
+
+                     /*PAGE SNAKE */
+/*____________________________________________________________*/
+
+/* Conteneur du canvas */
+#gameContainer {
+    text-align: center; /* Centre le contenu */
+    margin-top: 5%; /* Ajoute de l'espace en haut */
+}
+
+/* Fenêtre du jeu */
+#gameCanvas {
+    display: block;
+    margin: 0 auto; /* Centre horizontalement */
+    margin-bottom: 5%; /* Ajoute de l'espace en bas */
+    border: 2px solid white; /* Optionnel : ajoute une bordure pour délimiter */
 }
 
 
