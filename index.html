@@ -24,7 +24,7 @@
   <!-- logo -->
  <div class="logo"> <img src="img/logo.png"> </div>
 
-  <!-- boutton -->
+  <!-- boutton menu -->
   <button onclick ="show()"class="menubtn">≡</button>
 
   <!-- menu -->
@@ -67,7 +67,7 @@
   <!-- (bloc2) - texte  -->
   <div class="box1"> 
     <h2>En savoir plus sur moi</h2> 
-    <p>Ici, tu pourras consulter mon CV et essayer mes jeux et applications, régulièrement mis à jour. </p> 
+    <p>Ici, tu pourras consulter mon CV et essayer mes jeux et applications, régulièrement mis à jour.</p> 
   </div>
 
  <!-- (bloc2) - image  -->
@@ -79,13 +79,14 @@
 
 <!-- _______________________________________________________________________________________-->
 
-<!-- Fonction clique -->
+<!-- Fonction clique MENU -->
 <script>
-  function show()
-{
-  document.getElementById('menu').classList.toggle('active')
-}
 
+  function show() 
+  {
+    document.querySelector('.menu').classList.toggle('active');
+  }
+  
 </script>
 
 
