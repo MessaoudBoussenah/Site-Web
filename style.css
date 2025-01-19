@@ -163,11 +163,12 @@ button
                                       /*PAGE CV*/
 /*________________________________________________________________________________________________________________________________________________________*/
 
+/*(bloc1) - Fond*/
 .cv-container
 {
 	display: flex;
 	justify-content: space-evenly;
-
+	margin-bottom: 5%;
 }
 
 /*Colonne Gauche*/
@@ -237,21 +238,156 @@ button
 	display: flex;
 }
 
-.col-right img
+.col-right img /*pp*/
 {
-	width: 400px;
+	width: 300px;
 }
+
+/*_________________________________________________________________*/
+
+/*(bloc2) - Titre animé*/
+.animtitre
+{
+	width: 15ch; /*longueur des caracteres si la phrase en a 27 il faut mettre 27*/
+	animation: machine 2s steps(22), blink .5s step-end infinite alternate; /*steps = nombre de caractere qui s'affiche*/
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid green;
+
+	text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+h2.animtitre 
+{
+	font-size: 40px;
+	color: #40C057;
+	margin-bottom: 2%;
+}
+
+/*(bloc2) - Titre animé*/
+@keyframes machine
+{
+  from {
+	width: 0;
+  }
+}
+
+@keyframes blink 
+{
+	50%
+	{
+		border-color: greenyellow;
+	}
+}
+
+/*_____________________________*/
+
+/*(bloc2) - Fond*/
+.fondskills
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 80%;
+	height: 400px;
+	margin: auto;
+	margin-bottom: 10%;
+}
+
+/*(bloc2) - Sous-Titre*/
+.fondskills h3
+{
+	font-size: 1.7em;
+	color: #40C057;
+	margin: 4% 0 2% 0;
+}
+
+
+
+/*(bloc2.1) - Fond*/
+.contcomp
+{
+	border: #7ed957 solid 3px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	width: 80%;
+	padding: 2% 0 2% 0;
+
+}
+
+/* (Card) */
+.card
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* (Card) - Texte*/
+.card p
+{
+  text-align: center;
+  margin-bottom: 5%;
+  color: white;
+}
+
+/* (Card) - Images*/
+.card img
+{
+	width: 70px;
+}
+
+/*_____________________________*/
+
 
 /*______________________________________________________________________________________*/
 
                                       /*PAGE JEU*/
 /*______________________________________________________________________________________*/
 
-/*(bloc1) - Titre*/
+/*Galerie des jeux et applis*/
+.galeriejeu
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+/*Image présentation Galerie jeux et applis*/
+.galeriejeu img
+{
+	width: 200px;
+}
+
+/*_____________________________*/
+
+/*Carte des Jeux et Applications*/
+.caseapp
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+/*_____________________________*/
+
+/*(bloc1) - Conteneur Titre*/
 .jeubloc1
 {
-	background-color: white;
 	text-align: center;
+	margin: 30px 0 30px 0;
+}
+
+/*(bloc1) - Titre*/
+.jeubloc1 h2
+{
+	font-size: 30px;
+	color: #7ed957;
 }
 
 /*Regles du jeu - (Fond)*/
@@ -306,26 +442,10 @@ button
 #buttonapp
 {
 	background-color: white;
-	color: black;
 	display: block;
 
 	margin-top: 5px;
-}
-
-
-/*_____________________________*/
-
-/*Galerie des jeux et applis*/
-.galeriejeu
-{
-	display: flex;
-	justify-content: space-around;
-}
-
-/*Image présentation Galerie jeux et applis*/
-.galeriejeu img
-{
-	width: 200px;
+	padding: 3%;
 }
 
 /*_____________________________*/
@@ -474,6 +594,11 @@ form input.operator
   border : 2px solid black;
 }
 
+textarea
+{
+	resize: none;
+	height: 100px;
+}
 
 /*(bloc1) - (boutton envoyer formulaire)*/
 #buttoncontact
@@ -502,6 +627,12 @@ form input.operator
                              /*MENU MOBILE*/
 /*____________________________________________________*/
 
+/*logo*/
+.logo
+{
+	margin-left: auto;
+}
+
 /*boutton menu*/
 .menubtn
 {
@@ -520,11 +651,7 @@ form input.operator
     top: 80px;
 }
 
-/*logo*/
-.logo
-{
-	margin-left: auto;
-}
+
 
 /*conteneur principal*/
 ul .menu
@@ -532,10 +659,11 @@ ul .menu
     display: block;
 }
 
+/*menu*/
 .menu 
 {
     display: block;
-    background-color: #36cbfb;
+    background-color: #7ed957;
     width: 100%;
     flex-direction: column;
 
@@ -543,10 +671,17 @@ ul .menu
     top: -300px;
 }
 
+/*menu ouvert*/
+.menu.active
+{
+    top: 80px;
+}
+
 /*liens menu*/
-ul li a
+.menu li a
 {
     display: block;
+	color: white;
 }
 
 /*____________________________________________________*/
