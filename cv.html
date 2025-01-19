@@ -45,7 +45,7 @@
 
 <!-- ________________________________________________________________________________ -->
 
- <!-- (bloc1) - fond -->
+<!-- (bloc1) - fond -->
  
 <!-- Containeur CV-->
 <div class="cv-container">
@@ -55,7 +55,7 @@
 
     <!-- Presentation -->  
     <div class="pres">
-     <p>Développeur Web Full-Stack </n></p>
+     <p>Développeur Web Front-End </n></p>
      <h2>Salut, Je suis Messaoud Boussenah</h2>
      <p>Ici tu peux télecharger mon CV,<br> et consulter mes réseaux sociaux</p>
     </div>
@@ -77,7 +77,6 @@
 
   </div>
   
-  
   <!-- Colonne droite -->
   <div class="col-right"> 
 
@@ -86,17 +85,66 @@
   
 </div>
 
+<h2 class="animtitre">Mes Compétences</h2> <!-- Titre -->
+
+<!-- (bloc2) - fond -->
+ <div class="fondskills">
+
+  <h3>Programmation</h3> <!-- Sous-Categorie -->
+  <!-- (bloc2.1) - Container Competences -->
+  <div class="contcomp"> 
+
+    <div class="card">
+      <p>HTML 5</p>
+      <img src="img/ichtml.png">
+    </div>
+
+    <div class="card">
+      <p>CSS 3</p>
+      <img src="img/iccss.png">
+    </div>
+
+    <div class="card">
+      <p>JavaScript</p>
+      <img src="img/icjs.png">
+    </div>
+
+    <div class="card">
+      <p>PHP</p>
+      <img src="img/icphp.png">
+    </div>
+
+  </div>
+
+  <h3>Design</h3> <!-- Sous-Categorie -->
+  <!-- (bloc 2.2) - Container Competences -->
+  <div class="contcomp">
+
+    <!-- Carte -->
+    <div class="card">
+      <p>Canva</p>
+      <img src="img/iccanva.png">
+    </div>
+
+    <!-- Carte -->
+    <div class="card">
+      <p>Adobe Illustrator</p>
+      <img src="img/icai.png">
+    </div>
+    
+  </div>
+
+ </div>
+
 <!-- ________________________________________________________________________________ -->
 
-<!-- Fonction clique -->
+<!-- Fonction clique MENU -->
 <script>
-  function show()
-{
-  document.getElementById('menu').classList.toggle('active')
-}
+  function show() 
+  {
+    document.querySelector('.menu').classList.toggle('active');
+  }
 </script>
-
-
 
 </body>
 </html>
