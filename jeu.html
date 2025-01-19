@@ -25,7 +25,7 @@
   <!-- logo -->
  <div class="logo"> <img src="img/logo.png"> </div>
 
-  <!-- boutton -->
+  <!-- boutton menu -->
   <button onclick ="show()"class="menubtn">≡</button>
 
   <!-- menu -->
@@ -43,7 +43,7 @@
 <!-- _______________________________________________________________________________________ -->
 
  
- <!-- (bloc1) - fond  -->
+ <!-- (bloc1) - fond -->
  <div class="jeubloc1">
   <h2>Tester divers Jeux et Applications !</h2>
 </div>
@@ -79,11 +79,12 @@
 
 <!-- ______________________________________________________________________________________ -->
 
-<!-- Fonction clique -->
+<!-- Fonction clique MENU -->
 <script>
-  function show()
+
+function show() 
 {
-  document.getElementById('menu').classList.toggle('active')
+  document.querySelector('.menu').classList.toggle('active');
 }
 
 </script>
