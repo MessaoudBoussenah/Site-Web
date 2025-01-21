@@ -284,7 +284,7 @@ h2.animtitre
 
 /*_____________________________*/
 
-/*(bloc2) - Fond*/
+/*(bloc2) - Containeur Skills*/
 .fondskills
 {
 	display: flex;
@@ -354,6 +354,7 @@ h2.animtitre
 .galeriejeu
 {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 }
 
@@ -363,6 +364,29 @@ h2.animtitre
 	width: 200px;
 }
 
+/* Titre des catégories*/
+.galeriejeu h2
+{
+   color: #7ed957;
+   text-align: center;
+   margin: 5% 0 3% 0;
+}
+
+/* Catégorie de la galerie*/
+.categalerie
+{
+   width: 80%;
+   margin: auto;
+   margin-bottom: 5%;
+
+   border: #7ed957 2px solid;
+
+   display: flex;
+   justify-content: space-around;
+}
+
+
+
 /*_____________________________*/
 
 /*Carte des Jeux et Applications*/
@@ -371,7 +395,13 @@ h2.animtitre
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 2% 0 2% 0;
+}
 
+/* Titre des Cartes*/
+.caseapp h2
+{
+   color: #7ed957;
 }
 
 /*_____________________________*/
@@ -441,7 +471,8 @@ h2.animtitre
 /*Images et boutton - (Boutton)*/
 #buttonapp
 {
-	background-color: white;
+	background-color: #7ed957;
+	color: white;
 	display: block;
 
 	margin-top: 5px;
@@ -570,7 +601,8 @@ form input.operator
 	flex-direction: column;
 
 	background-color: #7ed957;
-	width: 400px;
+
+	padding-bottom: 5%;
 }
 
 /*(bloc1) - (titre)*/
@@ -603,14 +635,17 @@ textarea
 /*(bloc1) - (boutton envoyer formulaire)*/
 #buttoncontact
 {
-  margin: 10px;
+  width: 50%;
+
   display: block;
+  margin-bottom: 5%;
+  margin: auto;
 }
 
 /*(bloc2) - (img)*/
 .blocimg img
 {						
- width: 500px;
+  width: 500px;
 }
 
 
@@ -622,6 +657,15 @@ textarea
 
 @media screen and (max-width: 800px)
 {
+
+/*____________________________________________________*/
+                     /*GENERAL*/
+/*____________________________________________________*/
+
+html, body 
+{
+    overflow-x: hidden; /*Retire le scroll latéral*/
+}
 
 /*____________________________________________________*/
                              /*MENU MOBILE*/
@@ -771,6 +815,60 @@ ul .menu
 	width: 200px;
 }
 
+/* ____________________ */
+
+/* Titre Principal*/
+.animtitre
+{
+	margin-top: 20%;
+}
+
+/* Titre Principal*/
+h2.animtitre
+{
+	font-size: 25px;
+}
+
+/* Containeur Skills*/
+.fondskills
+{
+	width: 100%;
+}
+
+/*(bloc2) - Sous-Titre*/
+.fondskills h3
+{
+	font-size: 20px;
+}
+
+/* (Card) - Images*/
+.card img
+{
+	width: 60px;
+}
+
+/*____________________________________________________*/
+                        /*JEU MOBILE*/
+/*____________________________________________________*/
+
+/*Galerie des jeux et applis*/
+.galeriejeu
+{
+	flex-direction: column;
+}
+
+/* Catégorie de la galerie*/
+.categalerie
+{
+	flex-direction: column;
+}
+
+/*Carte des Jeux et Applications*/
+.caseapp
+{
+	margin-bottom: 10%;
+}
+
 /*____________________________________________________*/
                         /*CONTACT MOBILE*/
 /*____________________________________________________*/
@@ -779,13 +877,20 @@ ul .menu
 .blocform
 {
 	width: auto;
-	flex-direction: column;
+	flex-direction: column-reverse;
 }
 
 /* Case formulaire*/
 .casenom
 {
 	width: 80vw;
+}
+
+/*(bloc2) - (img)*/
+.blocimg img
+{						
+  width: 400px;
+  margin-bottom: 5%;
 }
 
 /*fermeture*/
