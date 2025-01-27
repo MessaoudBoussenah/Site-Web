@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="style.css">
+    <link href="https://icones8.fr/icons" rel="stylesheet">
+
     <title>Accueil</title>
 </head>
 
@@ -15,8 +17,9 @@
 <!-- POLICE IMPORTER SUR GOOGLE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<!-- __________________________________________________________________________________ --> 
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<!-- ________________________________________________________________________________ --> 
 
 <!-- entete -->
 <header>
@@ -24,60 +27,137 @@
   <!-- logo -->
  <div class="logo"> <img src="img/logo.png"> </div>
 
-  <!-- boutton menu -->
+  <!-- boutton -->
   <button onclick ="show()"class="menubtn">≡</button>
+
+  <!-- button light & dark -->
+  <button id="theme-btn">
+    <img id="icsoleil" src="img/icsoleil.png" alt="Soleil">
+    <img id="iclune" src="img/iclune.png" alt="Lune">
+  </button>
 
   <!-- menu -->
   <ul class="menu">
 
     <li><a href="index.html">Accueil</a></li>
-    <li><a href="cv.html">CV</a></li>
+
     <li><a href="jeu.html">Jeux & Applications</a></li>
-    <li><a href="contact.html">Contact</a></li> 
+    <li><a href="contact.html">Contact</a></li>  
  
   </ul>
 
-
 </header>
 
-<!-- _______________________________________________________________________________________ -->
+<!-- ________________________________________________________________________________ -->
 
- <!-- (bloc1) - fond  -->
- <div class="home1">
+<!-- (bloc1) - fond -->
+ 
+<!-- Containeur CV-->
+<div class="cv-container">
+  
+  <!-- Colonne gauche -->
+  <div class="col-left">
 
-  <!-- (bloc1) - texte  -->
-  <div class="box1"> 
-    <h2>Bienvenue sur mon site visiteur !</h2> 
-    <p>Découvrez mes projets et apprenez-en davantage sur mon parcours.</p> 
+    <!-- Presentation -->  
+    <div class="pres">
+     <p>Développeur Web Front-End </n></p>
+     <h2>Salut, Je suis Messaoud Boussenah</h2>
+     <p>Ici tu peux télecharger mon CV,<br> et consulter mes réseaux sociaux</p>
+    </div>
+
+    <div class="icliste">
+
+      <div class="bouton-down">
+        <p>Télécharger mon CV</p>
+        <a href="img/cv.pdf" >
+        <img src="img/icdownload.png" alt="Icône Télécharger">
+        </a>
+      </div>
+
+      <div class="bouton-linkedin">
+      <a href="https://www.linkedin.com/in/boussenahmessaoud/"><img src="img/iclinkedin.png"></a>
+     </div>
+
+    </div>
+
   </div>
+  
+  
+  <!-- Colonne droite -->
+  <div class="col-right"> 
+    <img src="img/pp.png"> 
+  </div>
+  
+</div>
 
- <!-- (bloc1) - image  -->
- <div class="box2"> 
-  <img src="img/robohome1.png" alt="personnage assis devant un ordinateur"/> 
- </div>
 
- </div>
-
- <!-- ____________________________________________ -->
-
+<h2 class="animtitre">Mes Compétences</h2> <!-- Titre -->
 
 <!-- (bloc2) - fond -->
- <div class="home2">
-  
-  <!-- (bloc2) - texte  -->
-  <div class="box1"> 
-    <h2>En savoir plus sur moi</h2> 
-    <p>Ici, tu pourras consulter mon CV et essayer mes jeux et applications, régulièrement mis à jour.</p> 
+ <div class="fondskills">
+
+  <h3>Programmation</h3> <!-- Sous-Categorie -->
+  <!-- (bloc2.1) - Container Competences -->
+  <div class="contcomp"> 
+
+    <div class="card">
+      <p>HTML 5</p>
+      <img src="img/ichtml.png">
+    </div>
+
+    <div class="card">
+      <p>CSS 3</p>
+      <img src="img/iccss.png">
+    </div>
+
+    <div class="card">
+      <p>JavaScript</p>
+      <img src="img/icjs.png">
+    </div>
+
+    <div class="card">
+      <p>PHP</p>
+      <img src="img/icphp.png">
+    </div>
+
   </div>
 
- <!-- (bloc2) - image  -->
- <div class="box2"> 
-  <img src="img/robohome2.png" alt="une fusée de couleur blanche"/> 
- </div>
+  <h3>Design</h3> <!-- Sous-Categorie -->
+  <!-- (bloc 2.2) - Container Competences -->
+  <div class="contcomp">
+
+    <!-- Carte -->
+    <div class="card">
+      <p>Canva</p>
+      <img src="img/iccanva.png">
+    </div>
+
+    <!-- Carte -->
+    <div class="card">
+      <p>Adobe Illustrator</p>
+      <img src="img/icai.png">
+    </div>
+    
+  </div>
+
 
  </div>
 
-<!-- _______________________________________________________________________________________-->
+ 
+<h2 class="animtitre">Les Témoignages</h2>
+ <!-- (bloc3) - Temoignanges -->
+ <div class="temoin">
+
+   <!-- Photo de profil -->
+   <div class="pp">
+    <img src="img/ppuser.png">
+    <p>Cristophe Gamel</p>
+   </div>
+
+ </div>
+
+
+<!-- ________________________________________________________________________________ -->
 
 <!-- Fonction clique MENU -->
 <script>
@@ -88,6 +168,40 @@
   }
   
 </script>
+
+<!-- Fonction Light & Dark -->
+<script>
+
+// Sélection des éléments nécessaires
+const themeBtn = document.getElementById('theme-btn');
+const icSoleil = document.getElementById('icsoleil');
+const icLune = document.getElementById('iclune');
+const body = document.body; // On cible le body pour le changement de thème
+
+// Initialisation : montrer le soleil (mode sombre par défaut)
+icLune.style.display = 'none'; // Par défaut, on montre le soleil car mode sombre activé
+
+// Écouteur d'événement au clic
+themeBtn.addEventListener('click', () => {
+  // Basculer entre les modes sombre et clair
+  const isLightMode = body.classList.toggle('light-theme'); // Ajoute/enlève la classe et retourne le nouvel état
+
+  if (isLightMode) 
+  {
+    // Mode clair activé
+    icSoleil.style.display = 'none'; // Cacher le soleil
+    icLune.style.display = 'inline'; // Montrer la lune
+  } 
+  
+  else 
+  {
+    // Mode sombre activé
+    icSoleil.style.display = 'inline'; // Montrer le soleil
+    icLune.style.display = 'none'; // Cacher la lune
+  }
+});
+</script>
+
 
 
 
