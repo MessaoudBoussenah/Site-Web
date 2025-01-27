@@ -1,7 +1,7 @@
 /*structure*/
 *
 {
-font-family: "Roboto Mono", monospace;
+ font-family: "Roboto Mono", monospace;
  margin: 0;
  padding: 0;
  text-decoration: none;
@@ -10,6 +10,61 @@ font-family: "Roboto Mono", monospace;
 body
 {
 	background-color: #171717;
+}
+
+
+/*______________________________________________________________________________*/
+                                 /*LIGHT & DARK MODE*/
+/*______________________________________________________________________________*/
+
+/*Boutton Mode Dark*/
+#theme-btn
+{
+  width: 8%;
+  display: flex;
+  background-color: transparent;
+  border-radius: 10%;
+}
+
+/*Boutton Mode Light*/
+body.light-theme #theme-btn
+{
+  background-color: black;
+}
+
+/* Icone Boutton Dark*/
+#icsoleil, #iclune
+{
+   width: 30px;
+}
+
+/* Mode clair */
+body.light-theme 
+{
+	background-color: white; /* Fond clair */
+}
+
+/*Titre et Paragraphes*/
+body.light-theme p, body.light-theme h2, body.light-theme h3
+{
+	color: black;
+}
+
+/*ACCUEIL & CV*/
+
+/* Accueil & CV - Bordures */
+body.light-theme .contcomp, body.light-theme .temoin
+{
+	border: black 1px solid;
+}
+
+
+/*JEUX & APP*/
+
+/* Jeux & App - Boutton*/
+body.light-theme #buttonapp
+{
+	background-color: white;
 }
 
 
@@ -81,86 +136,7 @@ button
 
 /*________________________________________________________________________________________________________________________________________________________*/
 
-                                          /*PAGE ACCUEIL*/
-/*________________________________________________________________________________________________________________________________________________________*/
-
-/*(bloc1 & bloc2) - (fond)*/
-.home1, .home2
-{						
-	display: flex;
-	align-items: center;
-
-	width: 90%;
-
-    /*centrer la div automatiquement*/
-    margin: 100px auto 100px auto;
-}
-
-/*_________________________________________________________________*/
-
-
-/*(bloc1) - (titre, paragraphe)*/
-.home1 .box1
-{
-    padding-left: 10px;
-}
-
-/*(bloc1) - (titre)*/
-.home1 h2
-{
-	font-size: 35px;
-	text-align: left;
-	color: #40C057;
-}
-
-/*(bloc1) - (paragraphe)*/
-.home1 p
-{
-	font-size: 25px;
-	padding-top: 20px;
-	color: white;
-}
-
-/*(bloc1) - (image)*/
-.home1 .box2 img
-{
-	width: 300px;
-}
-
-/*_________________________________________________________________*/
-
-
-/*(bloc2) - titre, paragraphe*/
-.home2 .box1
-{
-    padding-left: 10px;
-}
-
-/*(bloc2) - titre*/
-.home2 h2
-{
-	font-size: 35px;
-	text-align: left;
-	color: #40C057;
-}
-
-/*(bloc2) - paragraphe*/
-.home2 p
-{
-	font-size: 25px;
-	padding-top: 20px;
-	color: white;
-}
-
-/*(bloc2) - image*/
-.home2 img
-{
-	width: 300px;
-}
-
-/*________________________________________________________________________________________________________________________________________________________*/
-
-                                      /*PAGE CV*/
+                                      /*PAGE HOME CV*/
 /*________________________________________________________________________________________________________________________________________________________*/
 
 /*(bloc1) - Fond*/
@@ -245,7 +221,7 @@ button
 
 /*_________________________________________________________________*/
 
-/*(bloc2) - Titre animé*/
+/* Titres animés*/
 .animtitre
 {
 	width: 15ch; /*longueur des caracteres si la phrase en a 27 il faut mettre 27*/
@@ -261,7 +237,7 @@ button
 
 h2.animtitre 
 {
-	font-size: 40px;
+	font-size: 35px;
 	color: #40C057;
 	margin-bottom: 2%;
 }
@@ -306,7 +282,6 @@ h2.animtitre
 }
 
 
-
 /*(bloc2.1) - Fond*/
 .contcomp
 {
@@ -317,7 +292,6 @@ h2.animtitre
 
 	width: 80%;
 	padding: 2% 0 2% 0;
-
 }
 
 /* (Card) */
@@ -344,6 +318,26 @@ h2.animtitre
 
 /*_____________________________*/
 
+/*(bloc 3)*/
+.temoin
+{
+	width: 80%;
+	height: 3rem;
+
+	border: #7ed957 2px solid;
+	display: flex;
+
+	margin: auto;
+	margin-bottom: 10%;
+}
+
+/*(bloc 3) - pp*/
+.pp
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 /*______________________________________________________________________________________*/
 
@@ -384,8 +378,6 @@ h2.animtitre
    display: flex;
    justify-content: space-around;
 }
-
-
 
 /*_____________________________*/
 
@@ -442,7 +434,7 @@ h2.animtitre
 {
 	color: white;
 	padding-top: 5px;
-	text-align: center;
+	text-align: left;
 }
 
 /*Case Appli (Règles en liste)*/
@@ -451,7 +443,7 @@ h2.animtitre
 	color: white;
 	padding-top: 5px;
 	list-style-type: none;
-	text-align: center;
+	text-align: left;
 }
 
 /*Images et boutton - (Fond)*/
@@ -729,52 +721,7 @@ ul .menu
 }
 
 /*____________________________________________________*/
-                        /*HOME MOBILE*/
-/*____________________________________________________*/
-
-/*(bloc1, bloc2) - fond*/
-.home1, .home2 
-{
-	flex-direction: column;
-	text-align: center;
-}
-
-/* ____________________ */
-
-/*(bloc1) - titre*/
-.home1 h2
-{
-   text-align: center;
-   font-size: 30px;
-}
-
-/*(bloc2) - titre*/
-.home2 h2
-{
-   text-align: center;
-   font-size: 30px;
-}
-
-/* ____________________ */
-
-/*(bloc1) - image*/
-.home1 .box2 img
-{
-	width: 50%;
-	height: auto;
-	padding-top: 10%;
-}
-
-/*(bloc2) - image*/
-.home2 .box2 img
-{
-	width: 50%;
-	height: auto;
-	padding-top: 10%;
-}
-
-/*____________________________________________________*/
-                        /*MOBILE CV*/
+                        /*Mobile - Home CV */
 /*____________________________________________________*/
 
 /*Containeur CV*/
@@ -848,7 +795,7 @@ h2.animtitre
 }
 
 /*____________________________________________________*/
-                        /*JEU MOBILE*/
+                        /*Mobile - JEU*/
 /*____________________________________________________*/
 
 /*Galerie des jeux et applis*/
@@ -867,6 +814,17 @@ h2.animtitre
 .caseapp
 {
 	margin-bottom: 10%;
+}
+
+/*____________________________________________________*/
+                        /* CALCULATRICE */
+/*____________________________________________________*/
+
+/*Touche Calculatrice*/
+.calculatrice form input
+{
+	width: 40px;
+	height: 40px;
 }
 
 /*____________________________________________________*/
