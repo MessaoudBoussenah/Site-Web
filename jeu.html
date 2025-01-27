@@ -25,16 +25,22 @@
   <!-- logo -->
  <div class="logo"> <img src="img/logo.png"> </div>
 
-  <!-- boutton menu -->
+  <!-- boutton -->
   <button onclick ="show()"class="menubtn">≡</button>
+
+    <!-- button light & dark -->
+    <button id="theme-btn">
+      <img id="icsoleil" src="img/icsoleil.png" alt="Soleil">
+      <img id="iclune" src="img/iclune.png" alt="Lune">
+    </button>
 
   <!-- menu -->
   <ul class="menu">
 
     <li><a href="index.html">Accueil</a></li>
-    <li><a href="cv.html">CV</a></li>
+
     <li><a href="jeu.html">Jeux & Applications</a></li>
-    <li><a href="contact.html">Contact</a></li>   
+    <li><a href="contact.html">Contact</a></li>  
  
   </ul>
 
@@ -71,6 +77,7 @@
     <button id="buttonapp"><a href="snake.html">Jouer</a></button>
    </div>
 
+
   </div>
 
   <!-- (bloc2.5) - TITRE CATEGORIE -->
@@ -86,7 +93,9 @@
     <button id="buttonapp"><a href="calcul.html">Jouer</a></button>
    </div>
 
+
   </div>
+
 
 
  </div>
@@ -103,6 +112,35 @@ function show()
   document.querySelector('.menu').classList.toggle('active');
 }
 
+</script>
+
+<!-- Fonction Light & Dark -->
+<script>
+
+// Sélection des éléments nécessaires
+const themeBtn = document.getElementById('theme-btn');
+const icSoleil = document.getElementById('icsoleil');
+const icLune = document.getElementById('iclune');
+const body = document.body; // On cible le body pour le changement de thème
+
+// Initialisation : montrer le soleil (mode sombre par défaut)
+icLune.style.display = 'none'; // Par défaut, on montre le soleil car mode sombre activé
+
+// Écouteur d'événement au clic
+themeBtn.addEventListener('click', () => {
+  // Basculer entre les modes sombre et clair
+  const isLightMode = body.classList.toggle('light-theme'); // Ajoute/enlève la classe et retourne le nouvel état
+
+  if (isLightMode) {
+    // Mode clair activé
+    icSoleil.style.display = 'none'; // Cacher le soleil
+    icLune.style.display = 'inline'; // Montrer la lune
+  } else {
+    // Mode sombre activé
+    icSoleil.style.display = 'inline'; // Montrer le soleil
+    icLune.style.display = 'none'; // Cacher la lune
+  }
+});
 </script>
 
 
