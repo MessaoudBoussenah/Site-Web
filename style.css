@@ -44,6 +44,12 @@ body.light-theme
 	background-color: white; /* Fond clair */
 }
 
+/* Menu*/
+body.light-theme .menu li a
+{
+    color: black;
+}
+
 /*Titre et Paragraphes*/
 body.light-theme p, body.light-theme h2, body.light-theme h3
 {
