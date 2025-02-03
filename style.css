@@ -73,7 +73,6 @@ body.light-theme #buttonapp
 	background-color: white;
 }
 
-
 /*______________________________________________________________________________*/
                                  /*MENU*/
 /*______________________________________________________________________________*/
@@ -135,15 +134,44 @@ button
     color:  #7ed957;
 }
 
-.menu > li > a:hover /* > utile pour uniquement toucher la class sans affecter les autres*/
-{
-	border-bottom: #7ed957 2px;
-}
 
 /*________________________________________________________________________________________________________________________________________________________*/
 
                                       /*PAGE HOME CV*/
 /*________________________________________________________________________________________________________________________________________________________*/
+
+/*(bloc 2 - Fond)*/
+.cont-bloc
+{
+	margin-top: 10%;
+}
+
+/*(bloc2) - Sous-Titre*/
+.cont-bloc h3
+{
+	font-size: 1.7em;
+	color: #40C057;
+	margin: 4% 0 2% 0;
+	text-align: center;
+}
+
+/*(bloc2) - Containeur Skills*/
+.sous-cat
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+	width: 80%;
+	margin: auto;
+
+	border: #7ed957 solid 3px;
+	padding: 2% 0 2% 0;
+}
+
+
+/*_______________________________________________________________________*/
+
 
 /*(bloc1) - Fond*/
 .cv-container
@@ -266,41 +294,7 @@ h2.animtitre
 
 /*_____________________________*/
 
-/*(bloc2) - Containeur Skills*/
-.fondskills
-{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	width: 80%;
-	height: 400px;
-	margin: auto;
-	margin-bottom: 10%;
-}
-
-/*(bloc2) - Sous-Titre*/
-.fondskills h3
-{
-	font-size: 1.7em;
-	color: #40C057;
-	margin: 4% 0 2% 0;
-}
-
-
-/*(bloc2.1) - Fond*/
-.contcomp
-{
-	border: #7ed957 solid 3px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-
-	width: 80%;
-	padding: 2% 0 2% 0;
-}
-
-/* (Card) */
+/* (Bloc2 - Card) */
 .card
 {
   display: flex;
@@ -308,7 +302,7 @@ h2.animtitre
   align-items: center;
 }
 
-/* (Card) - Texte*/
+/* (Bloc2 - Card) - Texte*/
 .card p
 {
   text-align: center;
@@ -316,7 +310,7 @@ h2.animtitre
   color: white;
 }
 
-/* (Card) - Images*/
+/* (Bloc2 - Card) - Images*/
 .card img
 {
 	width: 70px;
@@ -324,25 +318,61 @@ h2.animtitre
 
 /*_____________________________*/
 
-/*(bloc 3)*/
+
+/*(bloc 3 - Temoignages)*/
 .temoin
 {
-	width: 80%;
-	height: 3rem;
+	width: 65%;
 
 	border: #7ed957 2px solid;
 	display: flex;
+	align-items: center;
+	justify-content: space-around;
 
 	margin: auto;
 	margin-bottom: 10%;
 }
 
-/*(bloc 3) - pp*/
+/*(bloc 3) - Texte*/
+.temoin p
+{
+	color: white;
+} 
+
+/*(bloc 3) - profil*/
 .pp
 {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	align-items: center;
+	padding: 1%;
+}
+
+/*(bloc 3) - profil*/
+.pp img
+{
+  width: 100px;
+} 
+
+/*(bloc 3) - commentaire*/
+.com 
+{
+	text-align: center;
+	flex-grow: 1;
+}
+
+/*(bloc 3) - fleche scroll*/
+.fleche
+{
+	width: 40px;
+}
+
+/*(bloc 3) - lien linkedin*/
+.lien-link p
+{
+	color: #7ed957;
+	text-align: center;
+	margin-bottom: 20%;
 }
 
 /*______________________________________________________________________________________*/
