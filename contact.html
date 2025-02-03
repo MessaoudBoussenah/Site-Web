@@ -5,17 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="style.css">
-    <title>Accueil</title>
+    <title>Contact</title>
 </head>
 
  <!-- ______________________________________________________________________________ -->
 
 <body>
 
+<!-- Chargement du JS -->
+<script src="script.js" defer></script>
+
+
 <!-- POLICE IMPORTER SUR GOOGLE -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
 <!-- __________________________________________________________________________________ --> 
 
 <!-- entete -->
@@ -55,7 +60,7 @@
   
    <!--titre formulaire-->
    <div class="titreform">
-     <h2> Envoyer moi un message </h2>
+     <h2> Envoyez-moi un message </h2>
    </div>
 
    <!--case formulaire nom et prenom -->
@@ -81,49 +86,6 @@
 
 
 
-<!-- _____________________________________________________________________________________ -->
-
-<!-- Fonction clique MENU -->
-<script>
-
-  function show() 
-  {
-    document.querySelector('.menu').classList.toggle('active');
-  }
-  
-</script>
-
-  
-<!-- Fonction Light & Dark -->
-<script>
-
-// Sélection des éléments nécessaires
-const themeBtn = document.getElementById('theme-btn');
-const icSoleil = document.getElementById('icsoleil');
-const icLune = document.getElementById('iclune');
-const body = document.body; // On cible le body pour le changement de thème
-
-// Initialisation : montrer le soleil (mode sombre par défaut)
-icLune.style.display = 'none'; // Par défaut, on montre le soleil car mode sombre activé
-
-// Écouteur d'événement au clic
-themeBtn.addEventListener('click', () => {
-  // Basculer entre les modes sombre et clair
-  const isLightMode = body.classList.toggle('light-theme'); // Ajoute/enlève la classe et retourne le nouvel état
-
-  if (isLightMode) {
-    // Mode clair activé
-    icSoleil.style.display = 'none'; // Cacher le soleil
-    icLune.style.display = 'inline'; // Montrer la lune
-  } else {
-    // Mode sombre activé
-    icSoleil.style.display = 'inline'; // Montrer le soleil
-    icLune.style.display = 'none'; // Cacher la lune
-  }
-});
-
-
-</script>
 
 
 </body>
