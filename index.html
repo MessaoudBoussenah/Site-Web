@@ -75,7 +75,7 @@
       </div>
 
       <div class="bouton-linkedin">
-      <a href="https://www.linkedin.com/in/boussenahmessaoud/"><img src="img/iclinkedin.png"></a>
+      <a href="https://www.linkedin.com/in/boussenahmessaoud/details/recommendations/?detailScreenTabIndex=0"><img src="img/iclinkedin.png"></a>
      </div>
 
     </div>
@@ -90,20 +90,24 @@
   
 </div>
 
+<!-- ________________________________________________________________________________ -->
 
-<h2 class="animtitre">Mes Compétences</h2> <!-- Titre -->
 
 <!-- (bloc2) - fond -->
- <div class="fondskills">
+<div class="cont-bloc">
 
-  <h3>Programmation</h3> <!-- Sous-Categorie -->
-  <!-- (bloc2.1) - Container Competences -->
-  <div class="contcomp"> 
+<!-- Titre -->
+<h2 class="animtitre">Mes Compétences</h2> 
 
-    <div class="card">
+
+   <h3>Programmation</h3> 
+   <!-- (bloc2.1) - skills -->
+   <div class="sous-cat">
+  
+     <div class="card">
       <p>HTML 5</p>
       <img src="img/ichtml.png">
-    </div>
+     </div>
 
     <div class="card">
       <p>CSS 3</p>
@@ -122,9 +126,11 @@
 
   </div>
 
-  <h3>Design</h3> <!-- Sous-Categorie -->
-  <!-- (bloc 2.2) - Container Competences -->
-  <div class="contcomp">
+<!-- ____________________________ -->
+
+<h3>Design</h3> 
+<!-- Sous-Categorie -->
+<div class="sous-cat">
 
     <!-- Carte -->
     <div class="card">
@@ -138,15 +144,26 @@
       <img src="img/icai.png">
     </div>
     
-  </div>
+</div>
 
 
- </div>
 
+</div>
+
+
+
+
+<!-- ________________________________________________________________________________ -->
+
+ <!-- (bloc3) - Fond -->
+<div class="cont-bloc">
  
 <h2 class="animtitre">Les Témoignages</h2>
  <!-- (bloc3) - Temoignanges -->
  <div class="temoin">
+
+  <!-- Fleche gauche -->
+  <img src="img/flecheg.png" class="fleche gauche" alt="Flèche gauche">
 
    <!-- Photo de profil -->
    <div class="pp">
@@ -154,8 +171,19 @@
     <p>Cristophe Gamel</p>
    </div>
 
+   <!-- Commentaires -->
+   <p class="com">"Commentaire du clein, je suis satisfait"</p>
+
+   <!-- Fleche droite -->
+   <img src="img/fleched.png" class="fleche" alt="Flèche droite">
  </div>
 
+   <!-- Lien Linkedin -->
+   <div class="lien-link">
+    <p> <a href="">Cliquez Ici</a> pour consulter les témoignages via mon profil Linkedin</p>
+   </div>
+
+</div>
 
 <!-- ________________________________________________________________________________ -->
 
@@ -201,6 +229,53 @@ themeBtn.addEventListener('click', () => {
   }
 });
 </script>
+
+<!-- (Bloc 3) - Fonction Scroll Comentaire  -->
+ <script>
+
+// Sélection des éléments nécessaires
+const leftArrow = document.querySelector('.fleche.gauche'); // Flèche gauche
+const rightArrow = document.querySelector('.fleche:not(.gauche)'); // Flèche droite
+const profileName = document.querySelector('.pp p'); // Nom de la personne
+const comment = document.querySelector('.com'); // Commentaire
+
+// Tableau des commentaires
+const commentaires = [
+  { name: "Cristophe Gamel", comment: "Commentaire du client, je suis satisfait" },
+  { name: "Sophie Durand", comment: "Service exceptionnel, je recommande !" },
+  { name: "Jean Dupont", comment: "Une équipe très professionnelle, merci !" }
+];
+
+// Index actuel pour suivre le commentaire affiché
+let currentIndex = 0;
+
+// Fonction pour mettre à jour le contenu
+function updateComment() {
+  profileName.textContent = commentaires[currentIndex].name; // Met à jour le nom
+  comment.textContent = commentaires[currentIndex].comment; // Met à jour le commentaire
+}
+
+// Gestionnaire pour la flèche gauche
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--; // Reculer dans le tableau
+    updateComment(); // Mettre à jour le contenu
+  }
+});
+
+// Gestionnaire pour la flèche droite
+rightArrow.addEventListener('click', () => {
+  if (currentIndex < commentaires.length - 1) {
+    currentIndex++; // Avancer dans le tableau
+    updateComment(); // Mettre à jour le contenu
+  }
+});
+
+
+
+
+
+ </script>
 
 
 
