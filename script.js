@@ -15,51 +15,32 @@ document.querySelector('.menubtn').addEventListener('click', show);
 //________________________________________________________________________________
 
 
-/*Fonction DARK & LGHT*/
-
 document.addEventListener('DOMContentLoaded', function () {
-	const themeBtn = document.getElementById('theme-btn');
-	const icSoleil = document.getElementById('icsoleil');
-	const icLune = document.getElementById('iclune');
-	const body = document.body; // Cible <body> pour appliquer le thème globalement
-	const menuBtn = document.querySelector('.menubtn'); // Bouton du menu
-	const menu = document.querySelector('.menu'); // Menu mobile
-  
-	// Vérifier si un thème est déjà enregistré dans le localStorage
-	const savedTheme = localStorage.getItem('theme');
-  
-	// Si un thème est enregistré, l'appliquer
-	if (savedTheme === 'light') {
-	  body.classList.add('light-theme');  // Appliquer le mode clair sur le body
-	  icSoleil.style.display = 'none';
-	  icLune.style.display = 'inline';
-	} else {
-	  body.classList.remove('light-theme');  // Appliquer le mode sombre sur le body
-	  icSoleil.style.display = 'inline';
-	  icLune.style.display = 'none';
-	}
-  
-	// Basculer entre les modes Dark et Light
-	themeBtn.addEventListener('click', () => {
-	  const isLightMode = body.classList.toggle('light-theme');  // Basculer entre les modes
-  
-	  // Appliquer les icônes et stocker l'état du thème
-	  if (isLightMode) {
-		icSoleil.style.display = 'none';
-		icLune.style.display = 'inline';
-		localStorage.setItem('theme', 'light');  // Enregistrer le mode clair
-	  } else {
-		icSoleil.style.display = 'inline';
-		icLune.style.display = 'none';
-		localStorage.setItem('theme', 'dark');  // Enregistrer le mode sombre
-	  }
-	});
-  
-	// Fonction du menu mobile
-	menuBtn.addEventListener('click', () => {
-	  menu.classList.toggle('active'); // Basculer l'état actif du menu
-	});
+    const themeBtn = document.getElementById('theme-btn');
+    const icSoleil = document.getElementById('icsoleil');
+    const icLune = document.getElementById('iclune');
+    const body = document.body;
+
+    // Si aucun thème n'est enregistré, on définit le mode sombre par défaut
+    if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'dark');
+    }
+
+    // Appliquer le thème enregistré (ici dark)
+    const savedTheme = localStorage.getItem('theme');
+    body.classList.toggle('dark-theme', savedTheme === 'dark');
+    icSoleil.style.display = savedTheme === 'dark' ? 'inline' : 'none';
+    icLune.style.display = savedTheme === 'dark' ? 'none' : 'inline';
+
+    // Basculer entre les modes Dark et Light
+    themeBtn.addEventListener('click', () => {
+        const isDarkMode = body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        icSoleil.style.display = isDarkMode ? 'inline' : 'none';
+        icLune.style.display = isDarkMode ? 'none' : 'inline';
+    });
 });
+
 
 //___________________________________________________________________________________________________
 
