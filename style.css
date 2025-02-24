@@ -9,7 +9,7 @@
 
 body
 {
-	background-color: #171717;
+	background-color: white;
 }
 
 
@@ -17,19 +17,35 @@ body
                                  /*LIGHT & DARK MODE*/
 /*______________________________________________________________________________*/
 
+/* Mode dark */
+body.dark-theme {
+    background: black;
+    color: white;
+}
+
 /*Boutton Mode Dark*/
 #theme-btn
 {
-  width: 8%;
+  width: 5%;
   display: flex;
   background-color: transparent;
-  border-radius: 10%;
+  border-radius: 20%;
 }
 
+/*__________________________________*\
+
+/* GENERAL */
+
 /*Boutton Mode Light*/
-body.light-theme #theme-btn
+body.dark-theme #theme-btn
 {
-  background-color: black;
+  background-color: #ffffff;
+}
+
+/* Menu */
+body.dark-theme .menu li a
+{
+	color: #7ed957;
 }
 
 /* Icone Boutton Dark*/
@@ -38,39 +54,55 @@ body.light-theme #theme-btn
    width: 30px;
 }
 
-/* Mode clair */
-body.light-theme 
+/*__________________________________*\
+
+            /* HOME */
+/*__________________________________*\
+
+/* Les Titres */
+body.dark-theme h2
 {
-	background-color: white; /* Fond clair */
+  color: #7ed957;
 }
 
-/* Menu*/
-body.light-theme .menu li a
+/* Paragraphes */
+body.dark-theme p
 {
-    color: black;
+	color: white;
 }
 
-/*Titre et Paragraphes*/
-body.light-theme p, body.light-theme h2, body.light-theme h3
+/* Les Bordures */
+body.dark-theme .sous-cat, body.dark-theme .temoin
+{
+	border: #7ed957 1px solid;
+}
+
+/* Boutton CV*/
+.dark-theme .bouton-down
+{
+	border: #7ed957 1px solid;
+}
+
+/*__________________________________*\
+
+             /* JEUX */
+/*__________________________________*\
+
+/* Les Bordures */
+body.dark-theme .categalerie
+{
+	border: #7ed957 1px solid;
+}
+
+/*__________________________________*\
+
+             /* CONTACT */
+/*__________________________________*\
+
+/* Titre */
+body.dark-theme .titreform h2
 {
 	color: black;
-}
-
-/*ACCUEIL & CV*/
-
-/* Accueil & CV - Bordures */
-body.light-theme .contcomp, body.light-theme .temoin
-{
-	border: black 1px solid;
-}
-
-
-/*JEUX & APP*/
-
-/* Jeux & App - Boutton*/
-body.light-theme #buttonapp
-{
-	background-color: white;
 }
 
 /*______________________________________________________________________________*/
@@ -90,6 +122,15 @@ header
 
 	border-bottom: grey solid 1px;
 }
+
+/*__________________________________*\
+
+/*Boutton Light & Dark*/
+#theme-btn
+{
+	background-color: black;
+}
+
 
 /*__________________________________*\
 
@@ -131,7 +172,7 @@ button
 {
     text-decoration: none;
     padding: 10px;
-    color:  #7ed957;
+    color: black;
 }
 
 
@@ -150,7 +191,7 @@ button
 .cont-bloc h3
 {
 	font-size: 1.7em;
-	color: #40C057;
+	color: black;
 	margin: 4% 0 2% 0;
 	text-align: center;
 }
@@ -165,7 +206,7 @@ button
 	width: 80%;
 	margin: auto;
 
-	border: #7ed957 solid 3px;
+	border: black solid 3px;
 	padding: 2% 0 2% 0;
 }
 
@@ -187,17 +228,18 @@ button
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	width: 50%;
 }
 
 .pres h2
 {
 	font-size: 40px;
-	color: #40C057;
+	color: black;
 }
 
 .pres p
 {
-	color: white;
+	color: black;
 	font-size: 25px;
 	padding: 20px 0 20px 0
 }
@@ -215,7 +257,7 @@ button
 {
 	display: flex;
 	align-items: center;
-	border: #40C057 2px solid;
+	border: black 2px solid;
 	border-radius: 20px;
 	padding: 5px;
 	margin-right: 20px;
@@ -228,7 +270,7 @@ button
 
 .bouton-down p
 {
-  color: #40C057;
+  color: black;
   padding-right: 15px;
 }
 
@@ -246,6 +288,7 @@ button
 .col-right
 {
 	display: flex;
+	flex-direction: column;
 }
 
 .col-right img /*pp*/
@@ -324,7 +367,7 @@ h2.animtitre
 {
 	width: 65%;
 
-	border: #7ed957 2px solid;
+	border: black 2px solid;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -336,7 +379,7 @@ h2.animtitre
 /*(bloc 3) - Texte*/
 .temoin p
 {
-	color: white;
+	color: black;
 } 
 
 /*(bloc 3) - profil*/
@@ -370,7 +413,7 @@ h2.animtitre
 /*(bloc 3) - lien linkedin*/
 .lien-link p
 {
-	color: #7ed957;
+	color: black;
 	text-align: center;
 	margin-bottom: 20%;
 }
@@ -397,7 +440,7 @@ h2.animtitre
 /* Titre des catégories*/
 .galeriejeu h2
 {
-   color: #7ed957;
+   color: black;
    text-align: center;
    margin: 5% 0 3% 0;
 }
@@ -409,7 +452,7 @@ h2.animtitre
    margin: auto;
    margin-bottom: 5%;
 
-   border: #7ed957 2px solid;
+   border: black 2px solid;
 
    display: flex;
    justify-content: space-around;
@@ -429,7 +472,7 @@ h2.animtitre
 /* Titre des Cartes*/
 .caseapp h2
 {
-   color: #7ed957;
+   color: black;
 }
 
 /*_____________________________*/
@@ -445,7 +488,7 @@ h2.animtitre
 .jeubloc1 h2
 {
 	font-size: 30px;
-	color: #7ed957;
+	color: black;
 }
 
 /*Regles du jeu - (Fond)*/
@@ -461,14 +504,14 @@ h2.animtitre
 /*Regles du jeu - (Titre)*/
 .regles h2
 {
-	color: white;
+	color: black;
 	padding-bottom: 20px;
 }
 
 /*Case Appli (Règles en paragraphe)*/
 .regles p
 {
-	color: white;
+	color: black;
 	padding-top: 5px;
 	text-align: left;
 }
@@ -476,7 +519,7 @@ h2.animtitre
 /*Case Appli (Règles en liste)*/
 .regles ul li
 {
-	color: white;
+	color: black;
 	padding-top: 5px;
 	list-style-type: none;
 	text-align: left;
@@ -499,7 +542,6 @@ h2.animtitre
 /*Images et boutton - (Boutton)*/
 #buttonapp
 {
-	background-color: #7ed957;
 	color: white;
 	display: block;
 
@@ -765,6 +807,7 @@ ul .menu
 {
 	flex-direction: column-reverse;
 	text-align: center;
+	align-items: center;
 }
 
 /*colonne gauche*/
