@@ -94,16 +94,24 @@ body.dark-theme .categalerie
 	border: #7ed957 1px solid;
 }
 
+
+/*__________________________________*\
+
+            /* SHIFUMI */
+/*__________________________________*\
+
+/* Titre */
+body.dark-theme #resultat
+{
+	border: black solid 1px;
+}
+
+
 /*__________________________________*\
 
              /* CONTACT */
 /*__________________________________*\
 
-/* Titre */
-body.dark-theme .titreform h2
-{
-	color: black;
-}
 
 /*______________________________________________________________________________*/
                                  /*MENU*/
@@ -531,6 +539,7 @@ h2.animtitre
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 5%;
 }
 
 /*Images et boutton - (Image)*/
@@ -542,11 +551,11 @@ h2.animtitre
 /*Images et boutton - (Boutton)*/
 #buttonapp
 {
-	color: white;
+	color: black;
 	display: block;
 
 	margin-top: 5px;
-	padding: 3%;
+	padding: 1%;
 }
 
 /*_____________________________*/
@@ -555,7 +564,17 @@ h2.animtitre
 #resultat
 {
 	background-color: white;
-	width: 500px;
+	border: black 2px solid;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 2%;
+}
+
+/*Resultat jeu - (texte)*/
+#resultat p
+{
+	color: black;
+	text-align: center;
 }
 
 /*____________________________________________________________*/
@@ -580,6 +599,7 @@ h2.animtitre
 	background-color: white;
 	padding: 20px;
 	border-radius: 10px;
+	border: black 2px solid;
 }
 
 /*Touche Calculatrice*/
@@ -613,6 +633,7 @@ form .display input
 	flex: 1;
 	font-size: 40px;
 	box-shadow: none;
+	border: black solid 1px;
 }
 
 /*Boutton Egal Calculatrice*/
@@ -645,7 +666,7 @@ form input.operator
     display: block;
     margin: 0 auto; /* Centre horizontalement */
     margin-bottom: 5%; /* Ajoute de l'espace en bas */
-    border: 2px solid white; /* Optionnel : ajoute une bordure pour délimiter */
+    border: 2px solid black; /* Optionnel : ajoute une bordure pour délimiter */
 }
 
 
